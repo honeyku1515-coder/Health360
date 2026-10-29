@@ -170,16 +170,16 @@ All 9 visualizations required by the project specifications are generated progra
 ![Patient Age Distribution Pie](Health360/visualizations/viz5_age_distribution_pie.png)
 
 ### 6. Heart Disease vs Diabetes by BMI Category
-![Heart Disease vs Diabetes Prevalence](visualizations/viz6_heart_disease_vs_diabetes_bmi.png)
+![Heart Disease vs Diabetes Prevalence](Health360/visualizations/viz6_heart_disease_vs_diabetes_bmi.png)
 
 ### 7. BMI Category vs Heart Disease Incidence Rate
-![BMI vs Heart Disease Rate](visualizations/viz7_bmi_vs_heart_disease_rate.png)
+![BMI vs Heart Disease Rate](Health360/visualizations/viz7_bmi_vs_heart_disease_rate.png)
 
 ### 8. Heart Disease Risk Matrix (BMI vs Exercise Heatmap)
-![Heart Disease Heatmap](visualizations/viz8_heatmap_bmi_exercise.png)
+![Heart Disease Heatmap](Health360/visualizations/viz8_heatmap_bmi_exercise.png)
 
 ### 9. Fatigue Prevalence across Age Demographics
-![Fatigue by Age Group](visualizations/viz9_fatigue_by_age_group.png)
+![Fatigue by Age Group](Health360/visualizations/viz9_fatigue_by_age_group.png)
 
 ---
 
