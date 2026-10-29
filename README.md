@@ -158,7 +158,7 @@ All 9 visualizations required by the project specifications are generated progra
 ![KPI Overview](https://github.com/honeyku1515-coder/Health360/blob/2a5c14a8c5bccd265511d44b7a341be9ac6a46ee/Health360/visualizations/viz1_kpi_overview.png)
 
 ### 2. Blood Pressure Trends across Age Groups
-![Average Blood Pressure Across Age Groups](visualizations/viz2_blood_pressure_age_groups.png)
+![Average Blood Pressure Across Age Groups](Health360/visualizations/viz2_blood_pressure_age_groups.png)
 
 ### 3. Smoking Habits across Demographics
 ![Smoking Habits across Age Groups](visualizations/viz3_smoking_alcohol_age_groups.png)
