@@ -161,13 +161,13 @@ All 9 visualizations required by the project specifications are generated progra
 ![Average Blood Pressure Across Age Groups](Health360/visualizations/viz2_blood_pressure_age_groups.png)
 
 ### 3. Smoking Habits across Demographics
-![Smoking Habits across Age Groups](visualizations/viz3_smoking_alcohol_age_groups.png)
+![Smoking Habits across Age Groups](Health360/visualizations/viz3_smoking_alcohol_age_groups.png)
 
 ### 4. Exercise Level Distribution (Donut Chart)
-![Exercise Distribution Donut](visualizations/viz4_exercise_distribution_donut.png)
+![Exercise Distribution Donut](Health360/visualizations/viz4_exercise_distribution_donut.png)
 
 ### 5. Patient Cohort Share by Age Group
-![Patient Age Distribution Pie](visualizations/viz5_age_distribution_pie.png)
+![Patient Age Distribution Pie](Health360/visualizations/viz5_age_distribution_pie.png)
 
 ### 6. Heart Disease vs Diabetes by BMI Category
 ![Heart Disease vs Diabetes Prevalence](visualizations/viz6_heart_disease_vs_diabetes_bmi.png)
