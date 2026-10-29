@@ -53,7 +53,7 @@ Based on verified computations across the 5,000-patient cohort:
 
 ## 🏗 System Architecture & Workflow
 
-![Health360 System Architecture]([visualizations/architecture_diagram.png](https://github.com/honeyku1515-coder/Health360/blob/374391a3967d740361a8ff7b222d186acb7c7e1a/Health360/visualizations/architecture_diagram.png)
+![Health360 System Architecture](https://github.com/honeyku1515-coder/Health360/blob/374391a3967d740361a8ff7b222d186acb7c7e1a/Health360/visualizations/architecture_diagram.png)
 
 ```mermaid
 flowchart TD
