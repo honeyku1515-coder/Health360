@@ -299,7 +299,7 @@ Includes certificate page, declaration, acknowledgements, abstract, full archite
 ---
 
 ## 👥 Authors & Academic Attribution
-- **Student Name**: [Honey Kushwah]
+- **Student Name**: Honey Kushwah
 - **Degree**: Bachelor of Technology (B.Tech) in Computer Science & Engineering
-- **Institution**: [Medicaps University]
+- **Institution**: Medicaps University
 - **Project Academic Domain**: Healthcare Data Analytics & Medical Informatics
