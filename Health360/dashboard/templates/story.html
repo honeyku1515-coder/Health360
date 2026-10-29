@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health360: Analytical Data Story</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .scene { display: none; }
+        .scene.active { display: grid; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-container">
+            <div class="brand-icon">📖</div>
+            <div>
+                <div class="brand-title">Health360 Analytical Story</div>
+                <div class="brand-subtitle">Smart Healthcare: Patient Risk & Lifestyle Insights</div>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Interactive Dashboard</a>
+            <a href="/story" class="active">Analytical Story</a>
+        </nav>
+    </header>
+
+    <div class="story-container">
+        <div class="story-header">
+            <h1>Epidemiological Insights & Chronic Disease Trajectory</h1>
+            <p>An interactive, scene-by-scene walk-through investigating patient demographics, lifestyle habits, and chronic risk factors across 5,000 patient records.</p>
+        </div>
+
+        <!-- Story Navigation Tabs -->
+        <div class="story-nav">
+            <button class="story-tab-btn active" onclick="showScene(1)">1. Demographics & Age Cohorts</button>
+            <button class="story-tab-btn" onclick="showScene(2)">2. Fatigue & Subjective Symptoms</button>
+            <button class="story-tab-btn" onclick="showScene(3)">3. Physical Activity & Exercise</button>
+            <button class="story-tab-btn" onclick="showScene(4)">4. Blood Pressure Trends</button>
+            <button class="story-tab-btn" onclick="showScene(5)">5. Obesity & Heart Disease Risk</button>
+            <button class="story-tab-btn" onclick="showScene(6)">6. Diabetes & Multimorbidity</button>
+            <button class="story-tab-btn" onclick="showScene(7)">7. Synthesis & Recommendations</button>
+        </div>
+
+        <!-- Scene 1 -->
+        <div id="scene-1" class="story-scene-card scene active">
+            <div class="story-narrative">
+                <h2>Scene 1: Patient Cohort Demographics</h2>
+                <p>The Health360 cohort comprises 5,000 validated clinical records spanning adults aged 18 to 85 years, with balanced gender representation (50.5% Male, 49.5% Female).</p>
+                <p>Patients were stratified into six standardized demographic cohorts: Teenagers (18–30), Young Adults (31–40), Adults (41–50), Middle Age (51–60), Seniors (61–70), and Old (>70).</p>
+                <div class="highlight-box">
+                    <strong>Key Finding:</strong> Older adults (>70 years) form 22.4% of the cohort, while Teenagers represent 18.8%, providing a statistically robust cross-sectional sample across the lifespan.
+                </div>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz5_age_distribution_pie.png" alt="Patient Distribution by Age Group">
+            </div>
+        </div>
+
+        <!-- Scene 2 -->
+        <div id="scene-2" class="story-scene-card scene">
+            <div class="story-narrative">
+                <h2>Scene 2: Fatigue & Subclinical Symptoms</h2>
+                <p>Fatigue is among the most commonly reported non-specific clinical symptoms, affecting 41.2% of the overall patient cohort.</p>
+                <p>Stratification across age groups indicates that fatigue reports rise consistently with age and are frequently reported concurrently by individuals with elevated blood pressure and sedentary lifestyle.</p>
+                <div class="highlight-box">
+                    <strong>Clinical Takeaway:</strong> Fatigue frequently functions as an early warning indicator for unmanaged hypertension and metabolic strain before overt cardiovascular disease is diagnosed.
+                </div>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz9_fatigue_by_age_group.png" alt="Fatigue by Age Group">
+            </div>
+        </div>
+
+        <!-- Scene 3 -->
+        <div id="scene-3" class="story-scene-card scene">
+            <div class="story-narrative">
+                <h2>Scene 3: Exercise Habits & Physical Inactivity</h2>
+                <p>Analysis of physical activity indicates that 42.9% of patients report a Sedentary lifestyle, 37.3% engage in Moderate activity, and only 19.7% maintain Active exercise routines.</p>
+                <p>Cross-tabulation reveals that sedentary patients exhibit noticeably higher rates of both hypertension and chronic metabolic conditions compared to moderately active and active cohorts.</p>
+                <div class="highlight-box">
+                    <strong>Preventive Opportunity:</strong> Promoting even moderate daily physical activity represents the most accessible, high-impact non-pharmacological lifestyle intervention for this cohort.
+                </div>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz4_exercise_distribution_donut.png" alt="Exercise Level Distribution">
+            </div>
+        </div>
+
+        <!-- Scene 4 -->
+        <div id="scene-4" class="story-scene-card scene">
+            <div class="story-narrative">
+                <h2>Scene 4: Pervasive Hypertension Across Ages</h2>
+                <p>Analysis of systolic blood pressure reveals an average of 134.56 mmHg across the population. The Old age group records the highest mean at 135.67 mmHg, reflecting progressive arterial stiffening.</p>
+                <p>Remarkably, Young Adults (134.67 mmHg) and Teenagers (134.50 mmHg) demonstrate elevated systolic pressure closely trailing elderly cohorts, highlighting early-onset cardiovascular stress.</p>
+                <div class="highlight-box">
+                    <strong>Alarming Trend:</strong> Elevated blood pressure is not restricted to seniors; young adults and teenagers demonstrate pre-hypertension and Stage 1 hypertension, likely accelerated by lifestyle factors.
+                </div>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz2_blood_pressure_age_groups.png" alt="Average Blood Pressure Across Age Groups">
+            </div>
+        </div>
+
+        <!-- Scene 5 -->
+        <div id="scene-5" class="story-scene-card scene">
+            <div class="story-narrative">
+                <h2>Scene 5: Obesity as a Primary Driver of Heart Disease</h2>
+                <p>Body Mass Index (BMI) demonstrates a pronounced dose-response association with heart disease incidence.</p>
+                <p>While normal-weight individuals experience a heart disease rate of 14.8%, obese patients experience a rate exceeding 25.4%, demonstrating an approximate 1.7x relative risk elevation.</p>
+                <div class="highlight-box">
+                    <strong>Correlation vs. Causation:</strong> While observational data cannot prove direct causation, the biological plausibility linking adiposity, chronic inflammation, and atherosclerosis is strongly evident.
+                </div>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz7_bmi_vs_heart_disease_rate.png" alt="BMI vs Heart Disease Rate">
+            </div>
+        </div>
+
+        <!-- Scene 6 -->
+        <div id="scene-6" class="story-scene-card scene">
+            <div class="story-narrative">
+                <h2>Scene 6: The Cardiometabolic Syndemic (Diabetes & Heart Disease)</h2>
+                <p>Analyzing diabetes and heart disease concurrently across BMI tiers illuminates significant cardiometabolic multimorbidity.</p>
+                <p>Diabetes prevalence escalates from 11.2% in normal BMI individuals to over 24.6% in obese individuals, closely tracking cardiovascular disease progression.</p>
+                <div class="highlight-box">
+                    <strong>Synergistic Risk:</strong> Patients diagnosed with both diabetes and heart disease account for over 68% of the highest risk tier in our Health Risk Score stratification.
+                </div>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz6_heart_disease_vs_diabetes_bmi.png" alt="Heart Disease vs Diabetes Prevalence">
+            </div>
+        </div>
+
+        <!-- Scene 7 -->
+        <div id="scene-7" class="story-scene-card scene">
+            <div class="story-narrative">
+                <h2>Scene 7: Strategic Recommendations & Action Plan</h2>
+                <p>Combining demographic, clinical, and lifestyle dimensions demonstrates that non-communicable diseases develop through compounded lifetime risk exposures.</p>
+                <p>Key recommendations derived from this analysis:</p>
+                <ul style="margin-left: 20px; font-size: 0.95rem; line-height: 1.8;">
+                    <li><strong>Early Screening:</strong> Implement routine blood pressure and glucose screenings in young adults (18–40), not solely seniors.</li>
+                    <li><strong>Lifestyle Interventions:</strong> Prioritize community-based exercise programs targeting the 42.9% sedentary demographic.</li>
+                    <li><strong>Integrated Disease Management:</strong> Treat diabetes and cardiovascular health as interdependent rather than isolated conditions.</li>
+                </ul>
+            </div>
+            <div class="story-image-box">
+                <img src="/visualizations/viz8_heatmap_bmi_exercise.png" alt="Heart Disease Heatmap">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showScene(sceneNum) {
+            document.querySelectorAll('.scene').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.story-tab-btn').forEach(el => el.classList.remove('active'));
+            
+            const targetScene = document.getElementById(`scene-${sceneNum}`);
+            if (targetScene) targetScene.classList.add('active');
+            
+            const btns = document.querySelectorAll('.story-tab-btn');
+            if (btns[sceneNum - 1]) btns[sceneNum - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>

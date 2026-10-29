@@ -1,0 +1,290 @@
+{
+  "kpis": {
+    "total_patients": 5000,
+    "avg_age": 51.5,
+    "median_age": 51.0,
+    "avg_bmi": 26.7,
+    "avg_blood_pressure": 134.56,
+    "avg_cholesterol": 204.2,
+    "avg_glucose": 112.6,
+    "heart_disease_cases": 901,
+    "heart_disease_rate": 18.02,
+    "diabetes_cases": 839,
+    "diabetes_rate": 16.78,
+    "stroke_cases": 393,
+    "stroke_rate": 7.86,
+    "fatigue_cases": 1790,
+    "fatigue_rate": 35.8,
+    "chest_pain_cases": 994,
+    "chest_pain_rate": 19.88,
+    "dizziness_cases": 1031,
+    "dizziness_rate": 20.62,
+    "high_risk_cases": 1235,
+    "high_risk_rate": 24.7
+  },
+  "age_summary": [
+    {
+      "age_group": "Teenager",
+      "patient_count": 941,
+      "percentage": 18.82,
+      "avg_blood_pressure": 134.5,
+      "heart_disease_rate": 14.56,
+      "diabetes_rate": 13.18,
+      "fatigue_rate": 32.52
+    },
+    {
+      "age_group": "Young Adult",
+      "patient_count": 763,
+      "percentage": 15.26,
+      "avg_blood_pressure": 134.67,
+      "heart_disease_rate": 16.51,
+      "diabetes_rate": 15.86,
+      "fatigue_rate": 28.83
+    },
+    {
+      "age_group": "Adult",
+      "patient_count": 734,
+      "percentage": 14.68,
+      "avg_blood_pressure": 133.61,
+      "heart_disease_rate": 14.03,
+      "diabetes_rate": 14.99,
+      "fatigue_rate": 32.56
+    },
+    {
+      "age_group": "Middle Age",
+      "patient_count": 718,
+      "percentage": 14.36,
+      "avg_blood_pressure": 133.97,
+      "heart_disease_rate": 20.47,
+      "diabetes_rate": 20.75,
+      "fatigue_rate": 38.44
+    },
+    {
+      "age_group": "Senior",
+      "patient_count": 726,
+      "percentage": 14.52,
+      "avg_blood_pressure": 134.34,
+      "heart_disease_rate": 21.9,
+      "diabetes_rate": 16.39,
+      "fatigue_rate": 39.12
+    },
+    {
+      "age_group": "Old",
+      "patient_count": 1118,
+      "percentage": 22.36,
+      "avg_blood_pressure": 135.67,
+      "heart_disease_rate": 20.48,
+      "diabetes_rate": 19.32,
+      "fatigue_rate": 41.59
+    }
+  ],
+  "bmi_summary": [
+    {
+      "bmi_category": "Underweight",
+      "patient_count": 293,
+      "percentage": 5.86,
+      "heart_disease_cases": 47,
+      "heart_disease_rate": 16.04,
+      "diabetes_cases": 35,
+      "diabetes_rate": 11.95,
+      "stroke_rate": 6.14
+    },
+    {
+      "bmi_category": "Normal",
+      "patient_count": 1554,
+      "percentage": 31.08,
+      "heart_disease_cases": 229,
+      "heart_disease_rate": 14.74,
+      "diabetes_cases": 212,
+      "diabetes_rate": 13.64,
+      "stroke_rate": 8.75
+    },
+    {
+      "bmi_category": "Overweight",
+      "patient_count": 1816,
+      "percentage": 36.32,
+      "heart_disease_cases": 307,
+      "heart_disease_rate": 16.91,
+      "diabetes_cases": 243,
+      "diabetes_rate": 13.38,
+      "stroke_rate": 8.43
+    },
+    {
+      "bmi_category": "Obese",
+      "patient_count": 1337,
+      "percentage": 26.74,
+      "heart_disease_cases": 318,
+      "heart_disease_rate": 23.78,
+      "diabetes_cases": 349,
+      "diabetes_rate": 26.1,
+      "stroke_rate": 6.43
+    }
+  ],
+  "exercise_summary": [
+    {
+      "exercise_level": "Sedentary",
+      "patient_count": 2146,
+      "percentage": 42.92,
+      "heart_disease_rate": 17.05
+    },
+    {
+      "exercise_level": "Moderate",
+      "patient_count": 1867,
+      "percentage": 37.34,
+      "heart_disease_rate": 19.01
+    },
+    {
+      "exercise_level": "Active",
+      "patient_count": 987,
+      "percentage": 19.74,
+      "heart_disease_rate": 18.24
+    }
+  ],
+  "lifestyle_summary": [
+    {
+      "age_group": "Teenager",
+      "regular_smokers": 215,
+      "occasional_smokers": 213,
+      "non_smokers": 513,
+      "high_alcohol": 145,
+      "moderate_alcohol": 360,
+      "non_drinkers": 436
+    },
+    {
+      "age_group": "Young Adult",
+      "regular_smokers": 167,
+      "occasional_smokers": 180,
+      "non_smokers": 416,
+      "high_alcohol": 115,
+      "moderate_alcohol": 280,
+      "non_drinkers": 368
+    },
+    {
+      "age_group": "Adult",
+      "regular_smokers": 164,
+      "occasional_smokers": 163,
+      "non_smokers": 407,
+      "high_alcohol": 118,
+      "moderate_alcohol": 282,
+      "non_drinkers": 334
+    },
+    {
+      "age_group": "Middle Age",
+      "regular_smokers": 174,
+      "occasional_smokers": 150,
+      "non_smokers": 394,
+      "high_alcohol": 112,
+      "moderate_alcohol": 280,
+      "non_drinkers": 326
+    },
+    {
+      "age_group": "Senior",
+      "regular_smokers": 155,
+      "occasional_smokers": 176,
+      "non_smokers": 395,
+      "high_alcohol": 112,
+      "moderate_alcohol": 267,
+      "non_drinkers": 347
+    },
+    {
+      "age_group": "Old",
+      "regular_smokers": 260,
+      "occasional_smokers": 261,
+      "non_smokers": 597,
+      "high_alcohol": 192,
+      "moderate_alcohol": 406,
+      "non_drinkers": 520
+    }
+  ],
+  "heatmap_matrix": [
+    {
+      "bmi_category": "Underweight",
+      "Sedentary": 15.04,
+      "Moderate": 18.42,
+      "Active": 13.64
+    },
+    {
+      "bmi_category": "Normal",
+      "Sedentary": 13.21,
+      "Moderate": 15.38,
+      "Active": 17.11
+    },
+    {
+      "bmi_category": "Overweight",
+      "Sedentary": 15.62,
+      "Moderate": 18.27,
+      "Active": 16.95
+    },
+    {
+      "bmi_category": "Obese",
+      "Sedentary": 24.16,
+      "Moderate": 24.15,
+      "Active": 22.3
+    }
+  ],
+  "fatigue_summary": [
+    {
+      "age_group": "Teenager",
+      "fatigue_yes": 306,
+      "fatigue_no": 635,
+      "prevalence_rate": 32.52
+    },
+    {
+      "age_group": "Young Adult",
+      "fatigue_yes": 220,
+      "fatigue_no": 543,
+      "prevalence_rate": 28.83
+    },
+    {
+      "age_group": "Adult",
+      "fatigue_yes": 239,
+      "fatigue_no": 495,
+      "prevalence_rate": 32.56
+    },
+    {
+      "age_group": "Middle Age",
+      "fatigue_yes": 276,
+      "fatigue_no": 442,
+      "prevalence_rate": 38.44
+    },
+    {
+      "age_group": "Senior",
+      "fatigue_yes": 284,
+      "fatigue_no": 442,
+      "prevalence_rate": 39.12
+    },
+    {
+      "age_group": "Old",
+      "fatigue_yes": 465,
+      "fatigue_no": 653,
+      "prevalence_rate": 41.59
+    }
+  ],
+  "tableau_calculations": [
+    {
+      "name": "Age Group",
+      "formula": "IF [Age] >= 18 AND [Age] <= 30 THEN 'Teenager'\nELSEIF [Age] >= 31 AND [Age] <= 40 THEN 'Young Adult'\nELSEIF [Age] >= 41 AND [Age] <= 50 THEN 'Adult'\nELSEIF [Age] >= 51 AND [Age] <= 60 THEN 'Middle Age'\nELSEIF [Age] >= 61 AND [Age] <= 70 THEN 'Senior'\nELSE 'Old'\nEND",
+      "purpose": "Groups raw numerical patient age into demographic cohorts for stratified health comparison."
+    },
+    {
+      "name": "BMI Category",
+      "formula": "IF [BMI] < 18.5 THEN 'Underweight'\nELSEIF [BMI] < 25.0 THEN 'Normal'\nELSEIF [BMI] < 30.0 THEN 'Overweight'\nELSE 'Obese'\nEND",
+      "purpose": "Standardizes raw body mass index according to WHO classification thresholds."
+    },
+    {
+      "name": "Heart Disease Prevalence Rate (%)",
+      "formula": "SUM(IIF([Heart Disease] = 'Yes', 1, 0)) / COUNT([Patient ID]) * 100",
+      "purpose": "Calculates the percentage of patients with diagnosed heart disease within any filtered cohort."
+    },
+    {
+      "name": "Diabetes Prevalence Rate (%)",
+      "formula": "SUM(IIF([Diabetes] = 'Yes', 1, 0)) / COUNT([Patient ID]) * 100",
+      "purpose": "Calculates the percentage of patients with diabetes across demographic and clinical segments."
+    },
+    {
+      "name": "High Risk Patient Flag",
+      "formula": "IIF([Health Risk Score] >= 7.0 OR [Heart Disease] = 'Yes' OR [Stroke History] = 'Yes', 'High Risk', 'Standard Risk')",
+      "purpose": "Identifies critical patient cohorts requiring urgent preventive intervention."
+    }
+  ]
+}

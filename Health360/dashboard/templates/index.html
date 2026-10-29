@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health360: Comprehensive Healthcare Risk & Disease Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="brand-container">
+            <div class="brand-icon">🩺</div>
+            <div>
+                <div class="brand-title">Health360 Analytics</div>
+                <div class="brand-subtitle">Smart Healthcare Risk & Disease Epidemiological Dashboard</div>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="/" class="active">Interactive Dashboard</a>
+            <a href="/story">Analytical Story</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Interactive Sidebar Filters -->
+        <aside class="sidebar-filters">
+            <div class="filter-header">
+                <h2>Cohort Filters</h2>
+                <button id="btn-reset-filters" class="btn-reset">Reset Filters</button>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-age-group">Age Group</label>
+                <select id="filter-age-group">
+                    <option value="All">All Cohorts</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-bmi-category">BMI Category</label>
+                <select id="filter-bmi-category">
+                    <option value="All">All BMI Groups</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-exercise-level">Exercise Level</label>
+                <select id="filter-exercise-level">
+                    <option value="All">All Levels</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-gender">Gender</label>
+                <select id="filter-gender">
+                    <option value="All">All Genders</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-smoking">Smoking Habit</label>
+                <select id="filter-smoking">
+                    <option value="All">All Smoking Habits</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-heart-disease">Heart Disease</label>
+                <select id="filter-heart-disease">
+                    <option value="All">All Patients</option>
+                    <option value="Yes">Diagnosed (Yes)</option>
+                    <option value="No">No History (No)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-diabetes">Diabetes</label>
+                <select id="filter-diabetes">
+                    <option value="All">All Patients</option>
+                    <option value="Yes">Diabetic (Yes)</option>
+                    <option value="No">Non-Diabetic (No)</option>
+                </select>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 12px; background: #f8fafc; border-radius: 8px; font-size: 0.8rem; color: #64748b;">
+                <strong>Database Sync:</strong> Live connected to SQLite <code>patients_cleaned</code> (5,000 verified rows).
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Body -->
+        <main class="analytics-content">
+            <!-- Top KPI Cards -->
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <span class="kpi-title">Active Cohort</span>
+                    <span id="kpi-total-patients" class="kpi-value">5,000</span>
+                    <span class="kpi-sub">Verified Patient Records</span>
+                </div>
+                <div class="kpi-card accent">
+                    <span class="kpi-title">Average Age</span>
+                    <span id="kpi-avg-age" class="kpi-value">51.5 yrs</span>
+                    <span class="kpi-sub">Cohort Median: 52 yrs</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-title">Mean Systolic BP</span>
+                    <span id="kpi-avg-bp" class="kpi-value">134.56 mmHg</span>
+                    <span class="kpi-sub">Stage 1 HTN Baseline</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-title">Average BMI</span>
+                    <span id="kpi-avg-bmi" class="kpi-value">26.7 kg/m²</span>
+                    <span class="kpi-sub">Overweight Category</span>
+                </div>
+                <div class="kpi-card danger">
+                    <span class="kpi-title">Heart Disease</span>
+                    <span id="kpi-heart-disease" class="kpi-value">18.02%</span>
+                    <span id="kpi-heart-disease-sub" class="kpi-sub">901 Confirmed Cases</span>
+                </div>
+                <div class="kpi-card success">
+                    <span class="kpi-title">Diabetes Rate</span>
+                    <span id="kpi-diabetes" class="kpi-value">16.78%</span>
+                    <span id="kpi-diabetes-sub" class="kpi-sub">839 Confirmed Cases</span>
+                </div>
+            </section>
+
+            <!-- Row 1: Exercise Donut + Avg BP Bar + Smoking Habits Grouped Bar -->
+            <section class="charts-grid-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Exercise Level Distribution</h3>
+                        <p>Physical activity stratification in cohort</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-exercise-donut"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Average Blood Pressure across Age Groups</h3>
+                        <p>Systolic pressure comparison (Old: 135.67 mmHg)</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-bp-age"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Smoking Habits by Age Group</h3>
+                        <p>Stratified regular and occasional smoking patterns</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-smoking-grouped"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Row 2: BMI vs Heart Disease + HD vs Diabetes + Age Pie -->
+            <section class="charts-grid-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>BMI Category vs Heart Disease Rate</h3>
+                        <p>Elevated risk observed in obese category</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-bmi-hd"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Heart Disease vs Diabetes Prevalence</h3>
+                        <p>Comorbidity comparison across BMI groups</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-bmi-comparison"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Patient Distribution by Age Group</h3>
+                        <p>Proportional demographic representation</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-age-pie"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Row 3: Heatmap Table + Fatigue by Age Group -->
+            <section class="charts-grid-row-2">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Heart Disease Rate Matrix (BMI vs Exercise)</h3>
+                        <p>Prevalence (%) cross-tabulated by physical activity & BMI</p>
+                    </div>
+                    <div>
+                        <table class="heatmap-table">
+                            <thead>
+                                <tr>
+                                    <th>BMI Category</th>
+                                    <th>Sedentary</th>
+                                    <th>Moderate</th>
+                                    <th>Active</th>
+                                </tr>
+                            </thead>
+                            <tbody id="heatmap-tbody">
+                                <!-- Populated dynamically by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Age Group Distribution by Fatigue Condition</h3>
+                        <p>Reported chronic fatigue across age demographics</p>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="chart-fatigue-bar"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sample Patient Records Table -->
+            <section class="data-table-container">
+                <div class="table-header">
+                    <h3>Sample Patient Cohort Records (Top 15 Matching Filter)</h3>
+                    <span style="font-size: 0.85rem; color: #7f8c8d;">Showing subset for verification</span>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="patient-table">
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>BMI (Category)</th>
+                                <th>Exercise</th>
+                                <th>Blood Pressure</th>
+                                <th>Cholesterol</th>
+                                <th>Glucose</th>
+                                <th>Heart Disease</th>
+                                <th>Diabetes</th>
+                                <th>Risk Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sample-table-tbody">
+                            <!-- Populated dynamically by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
