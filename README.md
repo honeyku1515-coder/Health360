@@ -155,7 +155,7 @@ $$\text{Rate} = \frac{\sum \text{IIF}(\text{Heart\_Disease} = \text{'Yes'}, 1, 0
 All 9 visualizations required by the project specifications are generated programmatically at 300 DPI and embedded below:
 
 ### 1. KPI Patient Cohort & Disease Overview
-![KPI Overview](visualizations/viz1_kpi_overview.png)
+![KPI Overview](https://github.com/honeyku1515-coder/Health360/blob/2a5c14a8c5bccd265511d44b7a341be9ac6a46ee/Health360/visualizations/viz1_kpi_overview.png)
 
 ### 2. Blood Pressure Trends across Age Groups
 ![Average Blood Pressure Across Age Groups](visualizations/viz2_blood_pressure_age_groups.png)
